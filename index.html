@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<lable>Nhap ten cua ban</lable>
+<input type="text" id="inputname">
+<button onclick="fomatName()">in ten</button>
+</body>
+<script>
+    function fomatName(){
+        let inpu = document.getElementById('inputname').value;
+        let namarr = inpu.trim().split(' ')
+        console.log(namarr)
+
+        let out = namarr.map(ele => {
+            let first = ele[0].toUpperCase();
+            console.log(first)
+            return (first+ele.substring(1));
+        })
+        console.log(out.join(' '))
+    }
+</script>
+</html>
